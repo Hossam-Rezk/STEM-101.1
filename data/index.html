@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asthma Prediction Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <h1>Asthma Prediction</h1>
+            <ul class="nav-links">
+                <li><a href="#temperature-card">Temperature</a></li>
+                <li><a href="#humidity-card">Humidity</a></li>
+                <li><a href="#mq135-card">Air Quality</a></li>
+                <li><a href="#dust-sensor-card">Dust Sensor</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="card" id="temperature-card">
+            <h2>Temperature</h2>
+            <canvas id="temperatureChart"></canvas>
+        </div>
+        <div class="card" id="humidity-card">
+            <h2>Humidity</h2>
+            <canvas id="humidityChart"></canvas>
+        </div>
+        <div class="card" id="mq135-card">
+            <h2>Air Quality</h2>
+            <canvas id="mq135Chart"></canvas>
+        </div>
+        <div class="card" id="dust-sensor-card">
+            <h2>Dust Concentration</h2>
+            <canvas id="dustSensorChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stat-card">
+            <i class="fas fa-thermometer-half"></i>
+            <h3>Avg Temperature</h3>
+            <p id="avg-temp">-- °C</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-tint"></i>
+            <h3>Avg Humidity</h3>
+            <p id="avg-hum">-- %</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-smog"></i>
+            <h3>Avg Air Quality</h3>
+            <p id="avg-air">-- ppm</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-cloud"></i>
+            <h3>Avg Dust</h3>
+            <p id="avg-dust">-- μg/m³</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Threshold Warning</h3>
+            <p id="warning" style="display: none; color: red; font-weight: bold;">--</p>
+        </div>
+    </div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2024 Asthma Prediction System | STEM Menofia</p>
+  <p>Developed by: [Student Name 1], [Student Name 2], [Student Name 3]</p>
+  <!-- Connect Button -->
+  <button id="connect-btn" style="margin-top: 10px; padding: 10px 20px; font-size: 16px; cursor: pointer;">
+      Connect to ESP32
+  </button>
+</footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
